@@ -1,0 +1,206 @@
+body{
+	background-color: red;
+}
+
+#header-wrapper{
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+#header-row{
+	width: 100%;
+	// margin-right: -45px;
+ //    margin-left: -15px;
+}
+#header{
+	background-image: url('../images/sf-bg-park-header.jpg');
+	background-size: 100% 100%;
+}
+
+#header-left{
+	img{
+		margin-top: 15px;
+		margin-left: 115px;
+	}
+}
+
+#header-right{
+	float: right;
+	ul{
+		color: white;
+	}
+	h1, p{
+		margin-right: 75px;
+		color: white;
+	}
+	a{
+		color: white;
+	}
+	span{
+		margin-right: 5px;
+	}
+}
+
+#nav{
+	background-color: #f2f3f3;
+	#things, #plan, #new, #events, #hours, #groups{
+		background-color: #f2f3f3;
+		font-size: 12px;
+		border-right: 0.5px solid gray;
+		border-left: 0.5px solid gray;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+
+		p{
+			color: gray;
+			margin-top: 10px;
+		}
+		// :hover{
+		// 	background-color: black;
+		// 	color: yellow;
+		// }
+	}
+	#things:hover, #plan:hover, #new:hover, #events:hover, #hours:hover, #groups:hover, #passes:hover{
+	
+			background-color: black;
+			color: yellow;
+			p{
+				color: yellow;
+			}
+	}
+	#passes, #tickets{
+		background-color: #7EE647;
+		font-size: 12px;
+		border-right: 0.5px solid gray;
+		border-left: 0.5px solid gray;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		p{
+			color: white;
+			margin-top: 10px;
+		}
+	}
+
+	#tickets:hover{
+		background-color: #ffb000;
+		p{
+			color: black;
+		}
+	}
+}
+
+#join{
+	background-color: black;
+	p{
+		color: white;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 15px;
+	}
+
+	a{
+		color: white;
+		margin-top: 10px;
+	}
+}
+
+#main-content {
+  position: relative;
+  background-color: #a91a16;
+  float: left;
+}
+/* line 9, ../compass/sass/_home.scss */
+#main-content #swoosh {
+  position: absolute;
+  height: 632px;
+  width: 100%;
+  background: url(../images/sf-ribbons.png) bottom center no-repeat;
+  top: 100px;
+}
+/* line 17, ../compass/sass/_home.scss */
+#main-content #promotions {
+  max-width: 900px;
+  position: relative;
+  margin-top: 125px;
+  margin: auto;
+}
+/* line 22, ../compass/sass/_home.scss */
+#main-content #promotions .promo {
+  position: relative;
+  width: 32%;
+  box-sizing: border-box;
+  border: white solid 10px;
+  display: inline-block;
+  margin-left: 1%;
+  margin-bottom: 40px;
+}
+/* line 30, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-title {
+  color: #855206;
+  font-size: 26px;
+  background: #ffcb00;
+  padding: 5px 20px;
+  top: -11px;
+  left: -11px;
+  float: left;
+  position: absolute;
+  z-index: 10;
+}
+/* line 41, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-image {
+  position: relative;
+  z-index: 1;
+}
+/* line 45, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-text-title {
+  font-size: 20px;
+  color: white;
+}
+/* line 48, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-text-title:hover {
+  color: #ffcb00;
+}
+/* line 53, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-text-wrapper {
+  background-color: black;
+  padding: 10px;
+}
+/* line 56, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-text-wrapper .promo-text {
+  font-size: 12px;
+  color: #999;
+}
+/* line 69, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-small {
+  padding: 10px;
+  background-color: #dcd9cb;
+  overflow: hidden;
+  border-bottom: 1px solid #cacaca;
+}
+/* line 74, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-small .promo-small-image {
+  float: left;
+  width: 35%;
+  box-sizing: border-box;
+  padding-right: 5px;
+}
+/* line 80, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-small .promo-small-text-title {
+  font-size: 17px;
+}
+/* line 83, ../compass/sass/_home.scss */
+#main-content #promotions .promo .promo-small .promo-small-text {
+  font-size: 13px;
+  float: right;
+  width: 65%;
+  box-sizing: border-box;
+}
+#slideshow{
+	img{
+		width: 100%;
+	}
+}
