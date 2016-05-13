@@ -2,31 +2,48 @@
 	include 'includes/db_connect.php';
 
 
-	print_r($_POST);
 
-$title = "'".$_POST['title']."'"; 
-$header = "'".$_POST['header']."'";
-$header_text = "'".$_POST['header_text']."'";
-$body_text = "'".$_POST['body_text']."'"; 
-$lower_image = "'".$_POST['lower_image']."'";
-$lower_header = "'".$_POST['lower_header']."'";
-$lower_body = "'".$_POST['lower_body']."'";
-$lower_image_2 = "'".$_POST['lower_image_2']."'"; 
-$lower_header_2 = "'".$_POST['lower_header_2']."'";
-$lower_body_2 = "'".$_POST['lower_body_2']."'";
+	if($_GET['task'] == 'update'){
+		//We know they get from the update page bc the task == update.
+		$what_to_update = '';
+		foreach ($_POST as $key => $value) {
+			# code...
+			$what_to_update .= $key."='".$value."',";
+		}
 
-$query = 'INSERT INTO promos 
-    (title, header, header_text, body_text, lower_image, lower_header, lower_body, lower_image_2, lower_header_2, lower_body_2) 
-    VALUES 
-    ('.$title.','.$header.','.$header_text.','.$body_text.','.$lower_image.','.$lower_header.','.$lower_body.','.$lower_image_2.','.$lower_body_2.','.$lower_header_2.')';
+		$trimmed_update = rtrim($what_to_update, ",");
 
-print $query;
-exit;
+		$query = 'UPDATE promos
+				SET' .$trimmed_update
+				. ' WHERE id =' .$_GET['id'];
+		$update_result = mysql_query($query);
+		header('Location: admin.php?updated=true');
+	}else if($_GET['task'] == 'insert'){
+		//they are at the new promotions page bc the task value = insert
+		$db_columns = '';
+		$values = '';
+		foreach($_POST as $key => $value){
+			# code...
+			$db_columns .= $key.',';
+			$values .= "'".$value."',";
+		}
 
+		$trimmed_values = rtrim($values, ",");
+		$trimmed_db_columns = rtrim($db_columns, ",");
 
-    $result = mysql_query($query);
-    print mysql_error();
-    print "<br />";
-    print 'Finished';
+		$query = 'INSERT INTO promos
+			('.$trimmed_db_columns.')
+			VALUES('.$trimmed_values.')';
+
+			$resut = mysql_query($query);
+
+			header('Location: admin.php?updated=true');
+	}else if($_GET['task'] == 'delete'){
+		//deleete the promo
+		$query = 'DELETE FROM promos WHERE id = '.$_GET['id'];
+		$delete = mysql_query($query);
+		header('Location: admin.php?deleted=true');
+	}
+
 
 ?>
